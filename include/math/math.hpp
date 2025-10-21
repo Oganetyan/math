@@ -77,10 +77,9 @@ namespace math
     int factorial(int x)
     {
         int res = 0;
-        for (int i = 1; i <= x; ++x)
-        {
+        for (int i = 1; i <= x; ++i)
             res *= i;
-        }
+
         return res;
     }
 
@@ -167,8 +166,9 @@ namespace math
         return exp(y * ln(x));
     }
 
-    double log(double x, double y){
-        return ln(y)/ln(x);
+    double log(double x, double y)
+    {
+        return ln(y) / ln(x);
     }
 
 } // namespace math
