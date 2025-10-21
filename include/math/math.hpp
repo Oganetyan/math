@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdexcept>
+
 namespace math
 {
     constexpr double PI = 3.14159265358979323846264338327950288;
@@ -128,7 +130,7 @@ namespace math
     double ln(double x)
     {
         if (x <= 0)
-            throw;
+            throw std::domain_error("ln(x) requires x > 0 ");
 
         if (x < 0.5 || x > 2)
         {
