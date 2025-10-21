@@ -59,13 +59,10 @@ namespace math
 
     double remainder(double x, double y)
     {
-        x = abs(x);
-        y = abs(y);
-        while (x > y)
-        {
-            x -= y;
-        }
-        return x;
+        if (y == 0.0)
+            return 0.0;
+
+        return x - static_cast<int>(x / y) * y;
     }
 
     double normalize(double x)
